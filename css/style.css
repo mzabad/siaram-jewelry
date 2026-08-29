@@ -376,6 +376,68 @@ section { padding: 96px 0; }
   color: var(--gold);
 }
 
+/* ---------------- Help / FAQ grid ---------------- */
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.help-grid.single {
+  grid-template-columns: minmax(260px, 420px);
+  justify-content: center;
+}
+
+.help-card {
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.help-icon { font-size: 1.4rem; }
+
+.help-card h4 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--green-deep);
+  margin: 0;
+}
+
+.help-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+.help-card li {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  color: #5c5c50;
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+}
+.help-card li::before {
+  content: '\2013';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+.help-link {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-deep);
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  margin-top: 4px;
+}
+.help-link:hover { color: var(--gold); }
+
 /* ---------------- Instagram / CTA banner ---------------- */
 .cta-banner {
   background: var(--green-deep);
@@ -519,6 +581,7 @@ section { padding: 96px 0; }
   .split { grid-template-columns: 1fr; gap: 36px; }
   .split-media { order: -1; }
   .features { grid-template-columns: 1fr; gap: 44px; }
+  .help-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-wrap { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
 }
@@ -526,6 +589,7 @@ section { padding: 96px 0; }
 @media (max-width: 560px) {
   .container { padding: 0 20px; }
   .product-grid { grid-template-columns: 1fr; }
+  .help-grid { grid-template-columns: 1fr; }
   section { padding: 64px 0; }
   .nav { padding: 14px 20px; }
 }
