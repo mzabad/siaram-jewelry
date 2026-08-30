@@ -229,6 +229,7 @@ h1, h2, h3 {
   width: clamp(260px, 34vw, 440px);
   height: auto;
   margin: 0 auto 22px;
+  transform: translateX(-18px);
 }
 
 .hero-content .hero-sub {
@@ -660,6 +661,18 @@ section { padding: 96px 0; }
 .footer-col ul { display: flex; flex-direction: column; gap: 12px; }
 .footer-col a { font-size: 0.92rem; color: var(--cream-soft); }
 .footer-col a:hover { color: var(--gold-soft); }
+
+.footer-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-contact-list .icon {
+  width: 16px;
+  height: 16px;
+  color: var(--gold-soft);
+  flex-shrink: 0;
+}
 
 .footer-bottom {
   padding-top: 24px;
