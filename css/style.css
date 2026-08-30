@@ -183,6 +183,18 @@ h1, h2, h3 {
   color: var(--green-deep);
 }
 .mobile-menu.open { display: flex; }
+.mobile-menu-divider {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 2px 0;
+  width: 100%;
+}
+.mobile-menu .mobile-legal-link {
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: var(--green-mid);
+}
 
 /* ---------------- Hero ---------------- */
 .hero {
@@ -667,8 +679,14 @@ section { padding: 96px 0; }
   text-underline-offset: 3px;
 }
 .footer-bottom a:hover { color: var(--gold-soft); }
-.footer-legal-links { margin-top: 8px; }
-.footer-legal-links a { margin: 0 8px; }
+.footer-legal-links { margin-top: 14px; }
+.footer-legal-links a {
+  margin: 0 10px;
+  font-size: 0.85rem;
+  color: var(--gold-soft);
+  font-weight: 500;
+}
+.footer-legal-links a:hover { color: var(--ivory); }
 
 /* ---------------- Legal pages ---------------- */
 .legal-page { max-width: 820px; margin: 0 auto; }
