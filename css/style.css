@@ -229,7 +229,7 @@ h1, h2, h3 {
   width: clamp(260px, 34vw, 440px);
   height: auto;
   margin: 0 auto 22px;
-  transform: translateX(-18px);
+  transform: translateX(-9.02%);
 }
 
 .hero-content .hero-sub {
