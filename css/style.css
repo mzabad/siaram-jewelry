@@ -477,6 +477,86 @@ section { padding: 96px 0; }
 .cta-banner .btn-outline { border-color: var(--ivory); color: var(--ivory); }
 .cta-banner .btn-outline:hover { background: var(--ivory); color: var(--green-deep); }
 
+/* ---------------- FAQ accordion ---------------- */
+.faq-category {
+  max-width: 780px;
+  margin: 0 auto 72px;
+}
+.faq-category:last-child { margin-bottom: 0; }
+
+.faq-category-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--green-deep);
+  margin: 0 0 4px;
+}
+.faq-category-title .eyebrow { display: block; margin-bottom: 10px; }
+
+.faq-list { border-top: 1px solid var(--line); }
+
+.faq-item { border-bottom: 1px solid var(--line); }
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  color: var(--green-deep);
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  position: relative;
+}
+.faq-icon::before,
+.faq-icon::after {
+  content: '';
+  position: absolute;
+  background: var(--gold);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.faq-icon::before { width: 14px; height: 1.5px; }
+.faq-icon::after { width: 1.5px; height: 14px; }
+.faq-item.open .faq-icon::after { transform: translate(-50%, -50%) rotate(90deg); opacity: 0; }
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.faq-answer p {
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #5c5c50;
+  padding: 0 4px 22px;
+  margin: 0;
+}
+.faq-item.open .faq-answer { max-height: 400px; }
+
+.faq-note {
+  text-align: center;
+  margin-top: 8px;
+}
+.faq-note p {
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  color: var(--green-mid);
+}
+
 /* ---------------- Shop filter ---------------- */
 .filter-bar {
   display: flex;

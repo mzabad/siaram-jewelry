@@ -41,6 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btn.closest('.faq-item').classList.toggle('open');
+    });
+  });
+
   // Set active nav link
   const path = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a, .mobile-menu a').forEach((a) => {
