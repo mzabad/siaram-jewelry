@@ -225,6 +225,12 @@ h1, h2, h3 {
   margin-bottom: 6px;
 }
 
+.hero-logo {
+  width: clamp(260px, 34vw, 440px);
+  height: auto;
+  margin: 0 auto 22px;
+}
+
 .hero-content .hero-sub {
   font-family: var(--font-sans);
   font-weight: 400;
