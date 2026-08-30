@@ -6,8 +6,10 @@ Checks, for every .html page in the project root:
   - all internal links (href) point to files that actually exist
   - all images (src) point to files that actually exist
   - all images have non-empty alt text
-  - no leftover WhatsApp / wa.me / phone-number references
   - required tags exist: <title>, viewport meta, favicon link
+
+Note: WhatsApp/phone contact info is intentionally shown site-wide
+(footer contact box), so there's no longer a regression check for it.
 
 Run it any time after editing the site:
 
@@ -24,11 +26,6 @@ from urllib.parse import urlsplit
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-FORBIDDEN_PATTERNS = [
-    (re.compile(r"wa\.me", re.I), "leftover WhatsApp (wa.me) link"),
-    (re.compile(r"whatsapp", re.I), "leftover WhatsApp reference"),
-    (re.compile(r"\+?961\s*76\s*052\s*068"), "leftover phone number"),
-]
 
 
 class PageChecker(HTMLParser):
@@ -70,13 +67,6 @@ def check_page(path: str, all_failures: list):
     rel_path = os.path.relpath(path, ROOT)
     with open(path, "r", encoding="utf-8") as f:
         content = f.read()
-
-    # Regression checks: text content
-    # Legal pages intentionally list WhatsApp as a contact option.
-    if rel_path not in ("terms.html", "privacy.html"):
-        for pattern, label in FORBIDDEN_PATTERNS:
-            if pattern.search(content):
-                all_failures.append(f"{rel_path}: {label} found")
 
     # <title> present and non-empty
     title_match = re.search(r"<title>(.*?)</title>", content, re.S)
@@ -136,7 +126,7 @@ def main():
             print(f"  - {f}")
         sys.exit(1)
     else:
-        print("PASSED — no broken links, missing images, or leftover WhatsApp references.")
+        print("PASSED — no broken links or missing images.")
         sys.exit(0)
 
 

@@ -183,18 +183,6 @@ h1, h2, h3 {
   color: var(--green-deep);
 }
 .mobile-menu.open { display: flex; }
-.mobile-menu-divider {
-  border: none;
-  border-top: 1px solid var(--line);
-  margin: 2px 0;
-  width: 100%;
-}
-.mobile-menu .mobile-legal-link {
-  font-size: 0.76rem;
-  letter-spacing: 0.06em;
-  text-transform: none;
-  color: var(--green-mid);
-}
 
 /* ---------------- Hero ---------------- */
 .hero {
@@ -648,8 +636,8 @@ section { padding: 96px 0; }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.3fr 0.9fr 0.9fr 1.1fr;
+  gap: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(255,255,255,0.14);
 }
@@ -666,6 +654,17 @@ section { padding: 96px 0; }
 .footer-col ul { display: flex; flex-direction: column; gap: 12px; }
 .footer-col a { font-size: 0.92rem; color: var(--cream-soft); }
 .footer-col a:hover { color: var(--gold-soft); }
+
+.footer-contact-box {
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 22px 24px;
+  background: rgba(255,255,255,0.03);
+}
+.footer-contact-box h4 { margin-bottom: 16px; }
+.footer-contact-box ul { display: flex; flex-direction: column; gap: 12px; }
+.footer-contact-box a { font-size: 0.92rem; color: var(--cream-soft); }
+.footer-contact-box a:hover { color: var(--gold-soft); }
+
 .footer-bottom {
   padding-top: 24px;
   text-align: center;
@@ -679,14 +678,6 @@ section { padding: 96px 0; }
   text-underline-offset: 3px;
 }
 .footer-bottom a:hover { color: var(--gold-soft); }
-.footer-legal-links { margin-top: 14px; }
-.footer-legal-links a {
-  margin: 0 10px;
-  font-size: 0.85rem;
-  color: var(--gold-soft);
-  font-weight: 500;
-}
-.footer-legal-links a:hover { color: var(--ivory); }
 
 /* ---------------- Legal pages ---------------- */
 .legal-page { max-width: 820px; margin: 0 auto; }
