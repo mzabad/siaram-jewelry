@@ -72,9 +72,11 @@ def check_page(path: str, all_failures: list):
         content = f.read()
 
     # Regression checks: text content
-    for pattern, label in FORBIDDEN_PATTERNS:
-        if pattern.search(content):
-            all_failures.append(f"{rel_path}: {label} found")
+    # Legal pages intentionally list WhatsApp as a contact option.
+    if rel_path not in ("terms.html", "privacy.html"):
+        for pattern, label in FORBIDDEN_PATTERNS:
+            if pattern.search(content):
+                all_failures.append(f"{rel_path}: {label} found")
 
     # <title> present and non-empty
     title_match = re.search(r"<title>(.*?)</title>", content, re.S)
