@@ -655,16 +655,6 @@ section { padding: 96px 0; }
 .footer-col a { font-size: 0.92rem; color: var(--cream-soft); }
 .footer-col a:hover { color: var(--gold-soft); }
 
-.footer-contact-box {
-  border: 1px solid rgba(255,255,255,0.18);
-  padding: 22px 24px;
-  background: rgba(255,255,255,0.03);
-}
-.footer-contact-box h4 { margin-bottom: 16px; }
-.footer-contact-box ul { display: flex; flex-direction: column; gap: 12px; }
-.footer-contact-box a { font-size: 0.92rem; color: var(--cream-soft); }
-.footer-contact-box a:hover { color: var(--gold-soft); }
-
 .footer-bottom {
   padding-top: 24px;
   text-align: center;
