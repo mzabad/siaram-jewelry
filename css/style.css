@@ -599,8 +599,8 @@ section { padding: 96px 0; }
   max-width: 560px;
   width: 100%;
 }
-.contact-note {
-  margin-top: 22px;
+.contact-card p.contact-note {
+  margin-top: 40px;
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 0.86rem;
